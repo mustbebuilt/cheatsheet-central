@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Core 20 Cheat Sheet</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --ink: #1f2937;
+        --muted: #6b7280;
+        --line: #dfe7f1;
+        --accent: #2563eb;
+        --accent-soft: #dbeafe;
+        --code: #0f172a;
+        --code-bg: #f1f5f9;
+        --good: #166534;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 32px auto;
+        padding: 0 20px 40px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2.1rem;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin-bottom: 24px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        background: var(--accent-soft);
+        color: var(--accent);
+        padding: 5px 8px;
+        border-radius: 999px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 1.05rem;
+        margin: 0 0 8px;
+      }
+
+      code,
+      pre {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+
+      pre {
+        margin: 10px 0 0;
+        padding: 10px 12px;
+        background: var(--code-bg);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow-x: auto;
+        color: var(--code);
+      }
+
+      p {
+        margin: 0 0 8px;
+      }
+
+      .section-note {
+        margin-top: 28px;
+        padding: 16px 18px;
+        border-left: 5px solid var(--accent);
+        background: #eef5ff;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HTML Core 20 Cheat Sheet</h1>
+      <div class="subtitle">
+        A quick reference to the most useful HTML elements for building web
+        pages.
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="tag">1</div>
+          <h2>&lt;html&gt;</h2>
+          <p>Root element for the entire page.</p>
+          <pre>
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">2</div>
+          <h2>&lt;head&gt;</h2>
+          <p>Contains metadata and page configuration.</p>
+          <pre>
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">3</div>
+          <h2>&lt;body&gt;</h2>
+          <p>Contains the visible page content.</p>
+          <pre>
+&lt;body&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+&lt;/body&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">4</div>
+          <h2>&lt;title&gt;</h2>
+          <p>Sets the browser tab title.</p>
+          <pre>&lt;title&gt;My App&lt;/title&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">5</div>
+          <h2>&lt;meta&gt;</h2>
+          <p>Provides metadata such as charset and viewport.</p>
+          <pre>
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">6</div>
+          <h2>&lt;h1&gt; to &lt;h6&gt;</h2>
+          <p>Headings for document structure.</p>
+          <pre>
+&lt;h1&gt;Main heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">7</div>
+          <h2>&lt;p&gt;</h2>
+          <p>Paragraph text.</p>
+          <pre>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">8</div>
+          <h2>&lt;a&gt;</h2>
+          <p>Hyperlink to another page or section.</p>
+          <pre>&lt;a href="https://example.com"&gt;Visit site&lt;/a&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">9</div>
+          <h2>&lt;img&gt;</h2>
+          <p>Embeds an image.</p>
+          <pre>&lt;img src="image.jpg" alt="A cat" /&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">10</div>
+          <h2>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h2>
+          <p>Lists for grouped content.</p>
+          <pre>
+&lt;ul&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+&lt;/ul&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">11</div>
+          <h2>&lt;div&gt;</h2>
+          <p>Generic container for layout and grouping.</p>
+          <pre>
+&lt;div class="card"&gt;
+  Content
+&lt;/div&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">12</div>
+          <h2>&lt;span&gt;</h2>
+          <p>Inline container for styling or markup.</p>
+          <pre>
+&lt;p&gt;This is &lt;span class="highlight"&gt;important&lt;/span&gt;.&lt;/p&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">13</div>
+          <h2>&lt;strong&gt;</h2>
+          <p>Important text displayed in bold.</p>
+          <pre>&lt;strong&gt;Important!&lt;/strong&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">14</div>
+          <h2>&lt;em&gt;</h2>
+          <p>Emphasized text displayed in italics.</p>
+          <pre>&lt;em&gt;Careful&lt;/em&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">15</div>
+          <h2>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</h2>
+          <p>Creates data tables.</p>
+          <pre>
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">16</div>
+          <h2>&lt;form&gt;</h2>
+          <p>Collects user input.</p>
+          <pre>
+&lt;form action="/submit" method="post"&gt;
+  &lt;input type="text" name="name" /&gt;
+&lt;/form&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">17</div>
+          <h2>&lt;input&gt;</h2>
+          <p>Text field, checkbox, radio, file upload, etc.</p>
+          <pre>
+&lt;input type="email" name="email" placeholder="you@example.com" /&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">18</div>
+          <h2>&lt;button&gt;</h2>
+          <p>Clickable button control.</p>
+          <pre>&lt;button type="submit"&gt;Send&lt;/button&gt;</pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">19</div>
+          <h2>&lt;section&gt;</h2>
+          <p>Groups related content into a thematic section.</p>
+          <pre>
+&lt;section&gt;
+  &lt;h2&gt;About&lt;/h2&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;</pre
+          >
+        </div>
+
+        <div class="card">
+          <div class="tag">20</div>
+          <h2>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;</h2>
+          <p>Semantic page regions for structure and accessibility.</p>
+          <pre>
+&lt;header&gt;Site title&lt;/header&gt;
+&lt;nav&gt;Links&lt;/nav&gt;
+&lt;main&gt;Main content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</pre
+          >
+        </div>
+      </div>
+
+      <div class="section-note">
+        <strong>Quick rule:</strong> use semantic elements for structure, CSS
+        for styling, and forms/inputs for user interaction.
+      </div>
+    </div>
+  </body>
+</html>
